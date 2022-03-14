@@ -7,18 +7,18 @@ const CastItem = ({ id, name, profile_path, character }) => {
   const castImg = `${CAST_IMG_URL}${profile_path}`;
 
   return (
-    <li className={s.CastItem} key={id}>
+    <li className={styles.castItem} key={id}>
       {profile_path !== null ? (
-        <img className={s.CastItemImg} src={castImg} alt="poster" />
+        <img className={styles.castImg} src={castImg} alt="poster" />
       ) : (
         <img
-          className={s.CastItemImg}
+          className={styles.castImg}
           src="../img/placeholder.jpg"
           alt="poster"
         />
       )}
-      <p className={s.CastItemName}>{name}</p>
-      <p className={s.CastItemChar}>{character}</p>
+      <p className={styles.castName}>{name}</p>
+      <p className={styles.castChar}>{character}</p>
     </li>
   );
 };
@@ -42,7 +42,7 @@ const Cast = () => {
 
   return (
     <>
-      <ul className={s.CastList}>
+      <ul className={styles.castList}>
         {cast !== null
           ? cast.map(({ id, name, profile_path, character }) => (
               <CastItem

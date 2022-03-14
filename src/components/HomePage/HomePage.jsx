@@ -4,8 +4,8 @@ import styles from "./HomePage.modules.css";
 
 const MovieItem = ({ id, title }) => {
   return (
-    <li className={s.MovieItemsItem} key={id}>
-      <Link className={s.MovieItemsLink} to={`/movies/${id}`}>
+    <li className={styles.movieItem} key={id}>
+      <Link className={styles.movieLink} to={`/movies/${id}`}>
         {title}
       </Link>
     </li>
@@ -51,8 +51,8 @@ const HomePage = () => {
   return (
     <>
       <section>
-        <h2 className={s.header}>Top Trending Movies</h2>
-        <ol className={s.HomePageList}>
+        <h2 className={styles.title}>Top Trending Movies</h2>
+        <ol className={styles.homePage}>
           <>
             {movies.results.map(({ id, original_title }) => (
               <MovieItem key={id} id={id} title={original_title} />
