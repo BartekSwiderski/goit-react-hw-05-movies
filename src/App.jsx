@@ -1,23 +1,19 @@
-import React, { Suspense } from "react";
+import React, { lazy, Suspense } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-const Navigation = React.lazy(() =>
-  import("./components/Navigation/Navigation")
-);
-const HomePage = React.lazy(() => import("./components/HomePage/HomePage"));
-const MovieDetailsPage = React.lazy(() =>
+const Navigation = lazy(() => import("./components/Navigation/Navigation"));
+const HomePage = lazy(() => import("./components/HomePage/HomePage"));
+const MovieDetailsPage = lazy(() =>
   import("./components/MovieDetails/MovieDetails")
 );
-const Cast = React.lazy(() => import("./components/Cast/Cast"));
-const Reviews = React.lazy(() => import("./components/Reviews/Reviews"));
-const MovieSearch = React.lazy(() =>
-  import("./components/MovieSearch/MovieSearch")
-);
+const Cast = lazy(() => import("./components/Cast/Cast"));
+const Reviews = lazy(() => import("./components/Reviews/Reviews"));
+const MovieSearch = lazy(() => import("./components/MovieSearch/MovieSearch"));
 
 const App = () => {
   return (
     <BrowserRouter>
-      <Suspense>
+      <Suspense fallback={<div>Loading...</div>}>
         <Navigation />
         <Routes>
           <Route
