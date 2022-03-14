@@ -1,0 +1,32 @@
+.navigation {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  background-color: antiquewhite;
+}
+.navigationGrid {
+  width: 250px;
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+}
+.navigationItem {
+  display: flex;
+  width: 90px;
+  height: 35px;
+  border: 1px solid #dab7a3;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  background-color: #dab7a3;
+}
+.navigationItem:hover {
+  box-shadow: 2px 3px 10px gray;
+}
+.navigationLink {
+  font-size: 18px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #21574a;
+  font-weight: 600;
+}

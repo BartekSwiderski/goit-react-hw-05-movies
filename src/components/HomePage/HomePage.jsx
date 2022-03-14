@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import styles from "./HomePage.modules.css";
+import styles from "./HomePage.module.css";
 
 const MovieItem = ({ id, title }) => {
   return (
@@ -49,7 +49,7 @@ const HomePage = () => {
     }
   });
   return (
-    <div>
+    <div className={styles.container}>
       <section>
         <h2 className={styles.title}>Top Trending Movies</h2>
         <ol className={styles.homePage}>

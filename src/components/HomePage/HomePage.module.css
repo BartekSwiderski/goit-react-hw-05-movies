@@ -1,0 +1,28 @@
+.container {
+  background-color: antiquewhite;
+  height: 100%;
+  padding-bottom: 50px;
+}
+.title {
+  margin-top: 0px;
+  padding-top: 5px;
+  color: #21574a;
+  font-size: 45px;
+  text-align: center;
+  font-weight: 700;
+}
+.homePage {
+  list-style: none;
+  text-align: center;
+}
+.movieItem {
+  margin-bottom: 8px;
+}
+.movieLink {
+  text-decoration: none;
+  font-size: 22px;
+  color: #628272;
+}
+.movieLink:hover {
+  color: #21574a;
+}

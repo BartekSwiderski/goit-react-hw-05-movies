@@ -1,24 +1,22 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import styles from "./Cast.modules.css";
+import styles from "./Cast.module.css";
 
 const CastItem = ({ id, name, profile_path, character }) => {
   const CAST_IMG_URL = "http://image.tmdb.org/t/p/w200";
   const castImg = `${CAST_IMG_URL}${profile_path}`;
+  const IMG_PLACEHOLDER =
+    "https://optoelectronics.ece.ucsb.edu/sites/default/files/styles/normalized/public/default_images/photo_not_available.png?itok=PRt9ESle";
 
   return (
     <li className={styles.castItem} key={id}>
       {profile_path !== null ? (
         <img className={styles.castImg} src={castImg} alt="poster" />
       ) : (
-        <img
-          className={styles.castImg}
-          src="../img/placeholder.jpg"
-          alt="poster"
-        />
+        <img className={styles.castImg} src={IMG_PLACEHOLDER} alt="poster" />
       )}
       <p className={styles.castName}>{name}</p>
-      <p className={styles.castChar}>{character}</p>
+      <p className={styles.castChar}>as {character}</p>
     </li>
   );
 };
@@ -42,6 +40,7 @@ const Cast = () => {
 
   return (
     <>
+      <h2 className={styles.castTitle}>Cast</h2>
       <ul className={styles.castList}>
         {cast !== null
           ? cast.map(({ id, name, profile_path, character }) => (

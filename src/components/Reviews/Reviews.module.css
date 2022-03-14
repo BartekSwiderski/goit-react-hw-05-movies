@@ -1,0 +1,35 @@
+.container {
+  background-color: antiquewhite;
+}
+.reviewItem {
+  width: 1000px;
+  box-shadow: 2px 3px 10px #9ca18d;
+  margin-bottom: 20px;
+}
+.reviewsTitle {
+  color: #21574a;
+  font-size: 30px;
+  text-align: center;
+  margin: 0px;
+  padding: 45px 0 60px 0;
+}
+.reviewText {
+  color: #21574a;
+}
+.reviewAuthor {
+  color: #628272;
+  font-size: 12px;
+}
+.reviews {
+  flex-wrap: wrap;
+  display: flex;
+  list-style: none;
+  text-align: center;
+  justify-content: center;
+}
+.noReviews {
+  color: #21574a;
+  text-align: center;
+  font-size: 70px;
+  margin-bottom: 200px;
+}

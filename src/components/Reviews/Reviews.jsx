@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router";
-import styles from "./Reviews.modules.css";
+import styles from "./Reviews.module.css";
 
 const Review = ({ id, author, content }) => {
   return (
-    <li className={styles.reviewItems} id={id}>
-      <p className={styles.reviewsText}>`{content}`</p>
-      <h3 className={styles.reviewsAuthor}>Author: {author}</h3>
+    <li className={styles.reviewItem} id={id}>
+      <p className={styles.reviewText}>`{content}`</p>
+      <h3 className={styles.reviewAuthor}>Author: {author}</h3>
     </li>
   );
 };
@@ -28,19 +28,20 @@ const Reviews = () => {
   useEffect(() => {
     fetchReviews(id);
   }, [id, setReviews]);
-
+  console.log(reviews);
   return (
-    <>
+    <div className={styles.container}>
+      <h2 className={styles.reviewsTitle}>Revievs</h2>
       <ul className={styles.reviews}>
-        {reviews !== null ? (
+        {reviews.length !== 0 ? (
           reviews.map(({ id, author, content }) => (
             <Review key={id} id={id} author={author} content={content} />
           ))
         ) : (
-          <p className={styles.noReviews}>`No reviews`</p>
+          <p className={styles.noReviews}>No reviews ಥ_ಥ</p>
         )}
       </ul>
-    </>
+    </div>
   );
 };
 

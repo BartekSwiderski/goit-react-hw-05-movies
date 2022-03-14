@@ -1,0 +1,92 @@
+.container {
+  background-color: antiquewhite;
+}
+.back {
+  margin-left: 30px;
+  width: 90px;
+  height: 35px;
+  border: 1px solid #dab7a3;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  background-color: #dab7a3;
+  color: #21574a;
+  font-size: 14px;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-weight: 800;
+  margin-bottom: 30px;
+}
+.movie {
+  display: flex;
+  justify-content: center;
+}
+.moviePoster {
+  height: 500px;
+  margin-right: 50px;
+  margin-left: 100px;
+}
+.movieInfo {
+  width: 600px;
+}
+.movieTitle {
+  font-size: 38px;
+  color: #21574a;
+  text-transform: uppercase;
+}
+.movieDescription {
+  display: flex;
+}
+.movieDate {
+  color: #628272;
+}
+.movieGenres {
+  display: flex;
+  list-style: none;
+  text-align: center;
+  align-items: center;
+  margin: 0px;
+  color: #628272;
+}
+.movieSpan {
+  font-weight: 800;
+  color: #21574a;
+}
+.movieGenresItem {
+  margin-left: 8px;
+}
+.movieScore {
+  color: #628272;
+  margin: 0px;
+}
+.overview {
+  font-size: 22px;
+  color: #21574a;
+  margin: 35px 0 10px 0;
+}
+.overviewText {
+  color: #628272;
+  margin: 0px 0px 80px;
+}
+.movieLinksGrid {
+  display: flex;
+  list-style: none;
+  justify-content: space-around;
+}
+.movieLinks {
+  display: flex;
+  width: 90px;
+  height: 35px;
+  border: 1px solid #dab7a3;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  background-color: #dab7a3;
+}
+.movieLink {
+  font-size: 15px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #21574a;
+  font-weight: 600;
+}

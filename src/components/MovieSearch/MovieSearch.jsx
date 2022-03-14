@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useSearchParams } from "react-router-dom";
 import { Link } from "react-router-dom";
-import styles from "./MovieSearch.modules.css";
+import styles from "./MovieSearch.module.css";
 
 const MovieSearch = () => {
   const [movies, setMovies] = useState([]);
@@ -43,7 +43,12 @@ const MovieSearch = () => {
   return (
     <div className={styles.moviesGrid}>
       <form className={styles.movieSearchForm} onSubmit={onSubmit}>
-        <input className={styles.movieSearchInput} type="text" name="query" />
+        <input
+          className={styles.movieSearchInput}
+          placeholder="Movie title"
+          type="text"
+          name="query"
+        />
         <button className={styles.movieSearchBtn} type="submit">
           Search
         </button>

@@ -1,0 +1,53 @@
+.moviesGrid {
+  padding-top: 20px;
+  background-color: antiquewhite;
+  height: 100rem;
+  align-items: center;
+  text-align: center;
+}
+.movieSearchForm {
+  width: 100fr;
+  margin-bottom: 50px;
+  padding-top: 50px;
+}
+.movieSearchInput:focus {
+  outline: none;
+}
+.movieSearchInput {
+  width: 290px;
+  height: 35px;
+  padding-left: 20px;
+  font-size: 18px;
+  border-radius: 5px;
+  border: #dab7a3 solid 1px;
+  color: #21574a;
+  font-weight: 600;
+}
+.movieSearchBtn {
+  margin-left: 30px;
+  width: 90px;
+  height: 35px;
+  border: 1px solid #dab7a3;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  background-color: #dab7a3;
+  color: #21574a;
+  font-size: 14px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.moviesList {
+  list-style: none;
+}
+.movieItem {
+  margin-bottom: 8px;
+}
+.movieLink {
+  text-decoration: none;
+  font-size: 22px;
+  color: #628272;
+}
+.movieLink:hover {
+  color: #21574a;
+}
