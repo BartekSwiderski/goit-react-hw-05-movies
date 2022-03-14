@@ -34,7 +34,7 @@ const Reviews = () => {
       <ul className={styles.reviews}>
         {reviews !== null ? (
           reviews.map(({ id, author, content }) => (
-            <ReviewsItem key={id} id={id} author={author} content={content} />
+            <Review key={id} id={id} author={author} content={content} />
           ))
         ) : (
           <p className={styles.noReviews}>`No reviews`</p>
