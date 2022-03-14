@@ -9,7 +9,7 @@ const MovieDetailsPage = () => {
   const navigate = useNavigate();
   const goBack = () => navigate(-1);
   const API_KEY = "837f028f22fd2591f3672c74a92683e2";
-  const POSTER_URL = "http://image.tmdb.org/t/p/w600";
+  const POSTER_URL = "http://image.tmdb.org/t/p/w500";
 
   const fetchApi = (id) => {
     fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=${API_KEY}`)

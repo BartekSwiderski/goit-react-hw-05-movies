@@ -49,18 +49,20 @@ const HomePage = () => {
     }
   });
   return (
-    <>
+    <div>
       <section>
         <h2 className={styles.title}>Top Trending Movies</h2>
         <ol className={styles.homePage}>
-          <>
-            {movies.results.map(({ id, original_title }) => (
+          {isLoaded === false ? (
+            <p>BŁĄd</p>
+          ) : (
+            movies.results.map(({ id, original_title }) => (
               <MovieItem key={id} id={id} title={original_title} />
-            ))}
-          </>
+            ))
+          )}
         </ol>
       </section>
-    </>
+    </div>
   );
 };
 

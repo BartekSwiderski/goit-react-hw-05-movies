@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router";
+import { useParams } from "react-router-dom";
 import styles from "./Cast.modules.css";
 
 const CastItem = ({ id, name, profile_path, character }) => {
