@@ -33,7 +33,7 @@ const MovieSearch = () => {
   };
 
   useEffect(() => {
-    if (query === null || query === "" || movies === null) {
+    if (query === null || query === "") {
       setMovies([]);
       return;
     }
