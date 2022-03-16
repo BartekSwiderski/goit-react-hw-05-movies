@@ -57,11 +57,11 @@ const MovieDetailsPage = () => {
           <h2 className={styles.movieTitle}>{original_title}</h2>
           <div className={styles.movieDescription}>
             <p className={styles.movieDate}>
-              <a className={styles.movieSpan}>Relese Date: </a>
-              {release_date}{" "}
+              <div className={styles.movieSpan}>Relese Date: </div>
+              {release_date}
             </p>
             <ul className={styles.movieGenres}>
-              <p className={styles.movieSpan}>Genres:</p>
+              <div className={styles.movieSpan}>Genres:</div>
               {genres !== undefined ? (
                 genres.map(({ id, name }) => (
                   <li className={styles.movieGenresItem} key={id}>
@@ -74,7 +74,7 @@ const MovieDetailsPage = () => {
             </ul>
           </div>
           <p className={styles.movieScore}>
-            <a className={styles.movieSpan}>User Score: </a>
+            <div className={styles.movieSpan}>User Score: </div>
             {vote_average}
           </p>
           <h3 className={styles.overview}>Overview:</h3>
